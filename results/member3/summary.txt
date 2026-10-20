@@ -1,0 +1,11 @@
+steps: 20
+available_steps: 20
+path_availability_pct: 100.0
+route_changes: 19
+avg_gnn_distance_km: 18149.09024350021
+avg_dijkstra_distance_km: 17088.691665362705
+avg_gnn_hops: 9.35
+avg_dijkstra_hops: 11.3
+avg_gnn_eclipsed: 2.65
+avg_dijkstra_eclipsed: 3.8
+avg_gnn_compute_ms: 42353.931425000155
