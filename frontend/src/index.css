@@ -1,0 +1,140 @@
+@import "@fontsource/barlow/400.css";
+@import "@fontsource/barlow/500.css";
+@import "@fontsource/barlow/600.css";
+@import "@fontsource/barlow-condensed/500.css";
+@import "@fontsource/barlow-condensed/600.css";
+@import "tailwindcss";
+
+/*
+  OrbitNet tokens
+  void      page background, deep navy
+  hull      panels; hull-2 raised panels
+  seam      hairlines and borders
+  ink       text; ink-dim secondary; ink-faint tertiary
+  signal    the one UI accent, also the GNN route colour
+  sunlit / eclipsed   satellite states (match Member 3's existing plots)
+  baseline  shortest-distance (Dijkstra) route
+  teacher   energy-aware optimum route
+  avoid     eclipse-avoiding reference route
+  source / dest       route endpoint markers
+*/
+@theme {
+  --color-void: #050a14;
+  --color-hull: #0a1322;
+  --color-hull-2: #0f1b2f;
+  --color-seam: #1b2b45;
+  --color-ink: #e3ebf7;
+  --color-ink-dim: #93a4bf;
+  --color-ink-faint: #5f7090;
+  --color-signal: #38d3f5;
+  --color-sunlit: #ffb45c;
+  --color-eclipsed: #7586a6;
+  --color-baseline: #ff7ac6;
+  --color-teacher: #9ae66e;
+  --color-avoid: #a5b4ff;
+  --color-source: #7cf5c8;
+  --color-dest: #c08bff;
+  --color-warn: #f5c451;
+  --color-danger: #ff6b6b;
+
+  --font-sans: "Barlow", system-ui, sans-serif;
+  --font-display: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  background: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-void);
+}
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.86em;
+  color: var(--color-ink);
+}
+
+/* Numbers that change should not jitter. */
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.readout {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-signal) 35%, transparent);
+}
+
+/* Quiet scrollbars inside panels. */
+.scroll-quiet {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-seam) transparent;
+}
+
+input[type="range"].timeline {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"].timeline::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--color-seam);
+  border-radius: 2px;
+}
+input[type="range"].timeline::-moz-range-track {
+  height: 4px;
+  background: var(--color-seam);
+  border-radius: 2px;
+}
+input[type="range"].timeline::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: var(--color-ink);
+  border: 3px solid var(--color-signal);
+}
+input[type="range"].timeline::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-ink);
+  border: 3px solid var(--color-signal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

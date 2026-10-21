@@ -1,0 +1,59 @@
+{
+ "plotly_load_s": 35.8,
+ "plotly_idle": {
+  "frames": 2,
+  "avgFps": 0.2898634743036029,
+  "medianFps": 0.27651043826904464,
+  "low1Fps": 0.27651043826904464,
+  "maxFrameMs": 3616.5
+ },
+ "plotly_step_all": {
+  "frames": 20,
+  "total_ms": 71482.1000000001,
+  "median_ms_per_snapshot": 3331.100000000093,
+  "max_ms_per_snapshot": 6760.799999999814
+ },
+ "plotly_playing": {
+  "frames": 6,
+  "avgFps": 0.5797381516015266,
+  "medianFps": 0.40819658747653065,
+  "low1Fps": 0.36587150592712075,
+  "maxFrameMs": 2733.1999999999825
+ },
+ "webgl_load_s": 7.0,
+ "webgl_idle": {
+  "frames": 10,
+  "avgFps": 1.986807597552253,
+  "medianFps": 1.9353590090961914,
+  "low1Fps": 1.1321181931393625,
+  "maxFrameMs": 883.3000000000011
+ },
+ "webgl_step_all": {
+  "frames": 19,
+  "total_ms": 19374.30000000028,
+  "median_ms_per_snapshot": 1026.2000000001863,
+  "max_ms_per_snapshot": 1149.7000000001863
+ },
+ "webgl_benchmark": {
+  "when": "2026-10-20T18:46:25.920Z",
+  "durationS": 20.33129999999983,
+  "frames": 33,
+  "avgFps": 1.8368130736562136,
+  "medianFps": 1.7652250661959399,
+  "low1Fps": 0.8798169980643306,
+  "p95FrameMs": 984.6999999997206,
+  "maxFrameMs": 1136.6000000000931,
+  "drawCalls": 11,
+  "points": 10706,
+  "lines": 13099,
+  "triangles": 36602,
+  "stepUploads": 7,
+  "playbackStepsPerSecond": 2,
+  "interpolate": true,
+  "linksShown": true,
+  "canvas": "1228\u00d7900",
+  "devicePixelRatio": 1,
+  "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.7390.37 Safari/537.36"
+ }
+}
