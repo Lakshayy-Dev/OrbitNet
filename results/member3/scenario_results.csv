@@ -1,0 +1,6 @@
+scenario,nodes,edges,eclipsed_nodes,dijkstra_distance,dijkstra_hops,dijkstra_eclipsed,gnn_distance,gnn_hops,gnn_eclipsed,gnn_route,dijkstra_route,eclipse_avoiding_reference_route,reference_route_distance,reference_route_eclipsed
+normal,6,7,0,1800.0,2,0,1800.0,2,0,S -> E -> T,S -> E -> T,,,
+heavy_eclipse,6,7,4,1800.0,2,1,1800.0,2,1,S -> E -> T,S -> E -> T,,,
+topology_before,6,3,0,2400.0,3,0,2400.0,3,0,S -> A -> B -> T,S -> A -> B -> T,,,
+topology_after,6,4,0,1800.0,2,0,1800.0,2,0,S -> E -> T,S -> E -> T,,,
+difficult_routing,6,5,1,1000.0,2,1,1000.0,2,1,S -> E -> T,S -> E -> T,S -> A -> B -> T,2100.0,0
